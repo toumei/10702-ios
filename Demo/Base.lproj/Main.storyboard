@@ -45,7 +45,7 @@
                                             <color key="titleColor" red="0.97781902551651001" green="0.89904534816741943" blue="0.73343229293823242" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                         <connections>
-                                            <action selector="buttonClickedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kyC-ab-Vmc"/>
+                                            <action selector="buttonClickedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mMk-0o-Mv6"/>
                                         </connections>
                                     </button>
                                 </subviews>

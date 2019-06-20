@@ -27,7 +27,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     @IBAction func buttonClicked(sender: AnyObject) {
-        
+        for i in 0...2 {
+            pickerView.selectRow(Int.random(in: 0...100), inComponent: i, animated: true)
+        }
     }
     
     // pickerView setting
@@ -54,12 +56,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     // content
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
-        for i in 0...3 {
+        for i in 0...2 {
             pickerView.selectRow(50, inComponent: i, animated: true)
         }
         return UIImageView(image: imageArray.randomElement())
     }
-    
-    
 }
 
