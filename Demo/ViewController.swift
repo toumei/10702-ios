@@ -26,15 +26,18 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         self.picker.delegate = self
         self.picker.dataSource = self
         
+        // set value of array
         imageArray = [#imageLiteral(resourceName: "dimond"),#imageLiteral(resourceName: "crown"),#imageLiteral(resourceName: "bar"),#imageLiteral(resourceName: "seven"),#imageLiteral(resourceName: "cherry"),#imageLiteral(resourceName: "lemon")]
+        // set value of label
         resultLabel.text = " "
-        
+        // set value of pickerArray
         for _ in 0...99 {
             pickerCol1.append(Int.random(in: 0...imageArray.count-1))
             pickerCol2.append(Int.random(in: 0...imageArray.count-1))
             pickerCol3.append(Int.random(in: 0...imageArray.count-1))
         }
         
+        // select row of pickerView
         for i in 0...2 {
             picker.selectRow(50, inComponent: i, animated: false)
         }
@@ -45,7 +48,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         // Dispose of any resources that can be recreated.
     }
     
-    
+    // spin pickerView
     @IBAction func buttonClicked(_ sender: Any) {
         for i in 0...2 {
             picker.selectRow(Int.random(in: 1...98), inComponent: i, animated: true)
@@ -63,28 +66,28 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     // UIPickerViewDataSource
-    // rowNum
+    // set rowNum
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return 100
     }
     
-    // colNum
+    // set colNum
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 3
     }
     
     // // UIPickerViewDelegate
-    // width
+    // set width
     func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
         return imageArray[component].size.width + 35
     }
     
-    // height
+    // set height
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat{
         return imageArray[component].size.height + 5
     }
     
-    // content
+    // set content
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         var img: UIImage = UIImage.init()
         switch component {
