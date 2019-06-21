@@ -18,43 +18,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="bg1" translatesAutoresizingMaskIntoConstraints="NO" id="wer-Sa-qtT">
-                                <rect key="frame" x="-66" y="74" width="480" height="749"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="bg1" translatesAutoresizingMaskIntoConstraints="NO" id="wer-Sa-qtT">
+                                <rect key="frame" x="0.0" y="44" width="16" height="16"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="hGA-TK-hyW">
-                                <rect key="frame" x="-32" y="74" width="479" height="153"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="88" translatesAutoresizingMaskIntoConstraints="NO" id="Ijt-zk-F5q">
-                                <rect key="frame" x="47" y="254" width="320" height="364"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="88" translatesAutoresizingMaskIntoConstraints="NO" id="Ijt-zk-F5q">
+                                <rect key="frame" x="47" y="254" width="320" height="679"/>
                                 <subviews>
-                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pVY-kw-1iZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
+                                    <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pVY-kw-1iZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="383"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <connections>
-                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="eyh-jm-7Ly"/>
-                                            <outlet property="delegate" destination="BYZ-38-t0r" id="4lq-8I-i5I"/>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="2uL-k5-4U8"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="nSb-QV-Hfu"/>
                                         </connections>
                                     </pickerView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFA-6f-eax">
-                                        <rect key="frame" x="0.0" y="304" width="320" height="60"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFA-6f-eax">
+                                        <rect key="frame" x="0.0" y="471" width="320" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <state key="normal" title="SPIN">
                                             <color key="titleColor" red="0.97781902551651001" green="0.89904534816741943" blue="0.73343229293823242" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                         <connections>
-                                            <action selector="buttonClickedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mMk-0o-Mv6"/>
+                                            <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Tg-ma-GAK"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmc-02-Pni">
+                                        <rect key="frame" x="0.0" y="619" width="320" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.3124448359" green="0.1018875316" blue="0.11369124799999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="jmc-02-Pni" firstAttribute="top" secondItem="DFA-6f-eax" secondAttribute="bottom" constant="88" id="2FW-Nn-vQR"/>
+                                    <constraint firstItem="DFA-6f-eax" firstAttribute="top" secondItem="pVY-kw-1iZ" secondAttribute="bottom" constant="88" id="MwS-dw-2XS"/>
+                                    <constraint firstAttribute="bottom" secondItem="jmc-02-Pni" secondAttribute="bottom" id="YSz-Na-sud"/>
+                                </constraints>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="hGA-TK-hyW">
+                                <rect key="frame" x="0.0" y="44" width="414" height="153"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ijt-zk-F5q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="2e3-69-Hpp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ijt-zk-F5q" secondAttribute="bottom" constant="96" id="BUW-1C-hHc"/>
+                            <constraint firstItem="Ijt-zk-F5q" firstAttribute="top" secondItem="hGA-TK-hyW" secondAttribute="bottom" constant="27" id="Bix-V0-ttz"/>
+                            <constraint firstItem="wer-Sa-qtT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YeR-EA-Gxa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ijt-zk-F5q" secondAttribute="trailing" constant="47" id="hhc-tj-MpO"/>
+                            <constraint firstItem="hGA-TK-hyW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jET-Pc-9xB"/>
+                            <constraint firstItem="hGA-TK-hyW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jS8-1i-8dA"/>
+                            <constraint firstItem="wer-Sa-qtT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="nyw-lt-nGZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hGA-TK-hyW" secondAttribute="trailing" id="yvQ-p5-8lC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="picker" destination="pVY-kw-1iZ" id="2Y2-M2-ok2"/>
+                        <outlet property="resultLabel" destination="jmc-02-Pni" id="5iw-OK-QWX"/>
+                        <outlet property="spinButton" destination="DFA-6f-eax" id="Zvy-nh-osW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
